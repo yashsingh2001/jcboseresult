@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+   
+     .submit:hover {
+      color: #000; /* Change the text color to black on hover */
+    }
+ 
+  </style>
+</head>
+<body>
+
+
+  <form action="#" method="post">
+    
+    
+    <label for="rollNumber"></label>
+    <label style="margin-left:23%" for="rollNumber">Roll No</label>
+    <input style="margin-left:10.6%; margin-top:13px" type="text" id="rollNumber" name="rollNumber" required>
+    <br><br>
+
+    
+    
+      
+    <label for="Semester"></label>
+    <label style="margin-left:23%" for="rollNumber">Semester</label>
+    <input style="margin-left:10%; margin-top:13px" list="options" id="selectedOption"  placeholder="<--Select-->" name="selectedOption" onchange="changeImage()" autocomplete="off">
+    <datalist id="options">
+      <option value="First Semester">
+      <option value="Second Semester">
+      <option value="Third Semester">
+        <option value="Fourth Semester">
+          <option value="Fifth Semester">
+            <option value="Sixth Semester">
+              <option value="Seventh Semester">
+                <option value="Eigth Semester">
+      <!-- Add more options as needed -->
+    </datalist>
+
+    <div id="imageContainer">
+        <img id="selectedImage" src="C:\Users\de\Desktop\jcbose result\img" alt="">
+      </div>
+
+    <br><br><br>
+    <input style="background-color: #3498db; color: #fff; padding: 8px 18px; border: none; border-radius: 5px; cursor: pointer; margin-left: 44.6%;  " type="submit" value="View Result">
+    
+  </form>
+  
+   <hr  style=" margin: 20px 0; border: 1px solid blue;"> <!-- Horizontal blue line -->
+
+ <p> <span style="color: red; font-weight: bold; margin-left: 21%;">**The Results displayed here are subject to updation/correction. The final result will be on DMC.</span></p>
+ <hr style="border-color:  light grey;"> <!-- Horizontal blue line -->
+
+ <script>
+    function displayImage() {
+        var selectElement = document.getElementById("selectedOption");
+        var selectedValue = selectElement.value;
+        var imageContainer = document.getElementById("image-container");
+        var selectedImage = document.getElementById("selected-image");
+
+        if (selectedValue === "default" && submit ==="unclicked" && rollNumber==="unfilled") {
+            imageContainer.style.display = "none";
+        } else {
+            // Set the source of the selected image
+            // You should replace the following paths with the actual paths to your images
+            if (selectedValue === "Seventh Semester") {
+                Image.src = "C:\Users\de\Desktop\jcbose result\img";
+            } else if (selectedValue === "Sixth Semester") {
+                selectedImage.src = "";
+            }
+            
+            // Display the image container
+            imageContainer.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>
